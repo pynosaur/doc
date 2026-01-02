@@ -1,0 +1,28 @@
+NAME: doc
+VERSION: "0.1.0"
+DESCRIPTION: >
+  Documentation viewer for Pynosaur CLI tools. Reads YAML-based manuals and renders them in a pager experience similar to `man` (black background, familiar navigation keys). Intended as a single place to view detailed docs for every Pynosaur tool, even when binaries are built or installed via pget.
+
+  doc searches for the requested manual in multiple locations (bundled docs when packaged, local repo docs for development, and installed helper docs under ~/.pget/helpers/<tool>/doc/). If a page is missing it exits with code 1 so callers can detect missing manuals. When stdout is not a TTY, it falls back to plain text output.
+USAGE:
+  - "doc <tool>"
+  - "doc --help"
+  - "doc --version"
+OPTIONS:
+  - "-h, --help            Show short help for doc (non-paged)"
+  - "-v, --version         Show version information"
+EXAMPLES:
+  - "doc see                  # View documentation for see"
+  - "doc pget                 # View documentation for pget"
+  - "doc yday                 # View documentation for yday"
+OUTPUT: >
+  Formatted documentation for the requested tool. Uses a curses pager in TTYs; prints plain text otherwise. Exit code 0 on success, 1 when documentation is missing.
+AUTHOR: "@spacemany2k38"
+DATE: "2025-12-31"
+NOTES:
+  - "Search order: bundled doc/, current ./doc/, then ~/.pget/helpers/<tool>/doc/<tool>.yaml"
+  - "Pager navigation: q quit, ↑/↓/j/k move, PgUp/PgDn/b/f/space page, d/u half-page, g/G start/end"
+  - "Falls back to plain output when not attached to a TTY"
+  - "Returns exit code 1 if documentation is missing"
+  - "Designed to stay minimal: short -h output, rich manual via YAML"
+
