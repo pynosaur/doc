@@ -1,5 +1,5 @@
 name: doc
-version: 0.1.1
+version: 0.1.2
 author: @spacemany2k38
 description: Documentation viewer for pynosaur CLI tools
 type: cli-tool
