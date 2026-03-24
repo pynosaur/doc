@@ -82,7 +82,8 @@ def _draw(stdscr, lines: List[str]) -> None:
         elif ch in (curses.KEY_UP, ord("k")):
             if offset > 0:
                 offset -= 1
-        elif ch in (curses.KEY_NPAGE, ord("f"), ord(" ")):  # Page down / space / ctrl+f-like
+        # Page down / space / ctrl+f-like
+        elif ch in (curses.KEY_NPAGE, ord("f"), ord(" ")):
             if offset + content_h < len(lines):
                 offset = min(len(lines) - content_h, offset + content_h)
         elif ch in (curses.KEY_PPAGE, ord("b")):  # Page up / ctrl+b-like

@@ -19,7 +19,11 @@ def _candidate_paths(app_name: str) -> List[Path]:
         candidates.append(Path(sys._MEIPASS) / "doc" / f"{app_name}.yaml")
 
     # Repository-relative doc folder
-    repo_doc = Path(__file__).resolve().parent.parent.parent / "doc" / f"{app_name}.yaml"
+    repo_doc = (
+        Path(__file__).resolve().parent.parent.parent /
+        "doc" /
+        f"{app_name}.yaml"
+    )
     candidates.append(repo_doc)
 
     # Current working directory doc folder (useful for local testing)
