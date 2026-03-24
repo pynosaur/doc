@@ -26,7 +26,9 @@ def _candidate_paths(app_name: str) -> List[Path]:
     candidates.append(Path.cwd() / "doc" / f"{app_name}.yaml")
 
     # Installed helpers via pget
-    candidates.append(Path.home() / ".pget" / "helpers" / app_name / "doc" / f"{app_name}.yaml")
+    candidates.append(
+        Path.home() / '.pget' / 'helpers' / app_name / 'doc' / f'{app_name}.yaml',
+    )
 
     return candidates
 
@@ -54,9 +56,9 @@ def _parse_simple_yaml(content: str) -> Dict[str, Union[str, List[str]]]:
     Supports:
     - KEY: value
     - KEY: >
-         multi-line block
+            multi-line block
     - KEY:
-      - list items
+        - list items
     """
     data: Dict[str, Union[str, List[str]]] = {}
     lines = content.splitlines()
@@ -157,9 +159,4 @@ def load_doc(app_name: str) -> Dict[str, Union[str, List[str]]]:
             if doc:
                 return doc
     return {}
-
-
-
-
-
 

@@ -1,7 +1,2 @@
 # Tests package for doc
 
-
-
-
-
-

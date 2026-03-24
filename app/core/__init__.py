@@ -1,7 +1,2 @@
 # Core package for doc
 
-
-
-
-
-
