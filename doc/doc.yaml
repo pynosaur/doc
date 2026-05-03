@@ -1,5 +1,5 @@
 NAME: doc
-VERSION: "0.1.2"
+VERSION: "0.1.3"
 DESCRIPTION: >
   Documentation viewer for Pynosaur CLI tools. Reads YAML-based manuals and renders them in a pager experience similar to `man` (black background, familiar navigation keys). Intended as a single place to view detailed docs for every Pynosaur tool, even when binaries are built or installed via pget.
 
