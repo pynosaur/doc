@@ -12,9 +12,9 @@ OPTIONS:
   - "-h, --help            Show short help for doc (non-paged)"
   - "-v, --version         Show version information"
 EXAMPLES:
-  - "doc see                  # View documentation for see"
-  - "doc pget                 # View documentation for pget"
-  - "doc yday                 # View documentation for yday"
+  - "doc see                   # View documentation for see"
+  - "doc pget                  # View documentation for pget"
+  - "doc yday                  # View documentation for yday"
 OUTPUT: >
   Formatted documentation for the requested tool. Uses a curses pager in TTYs; prints plain text otherwise. Exit code 0 on success, 1 when documentation is missing.
 AUTHOR: "@spacemany2k38"
